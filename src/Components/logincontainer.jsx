@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -12,6 +11,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {Button} from './template'
 
 
 
@@ -84,14 +84,14 @@ export default function SignIn() {
             />
             
             <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2,backgroundColor:'#e67e22' }}
+              name={"SIGN IN"}
+              width={'400px'}
+              marginTop={'1rem'}
+              
             >
-              Sign In
+              
             </Button>
-            <br/>
+            <br/><br/>
             <Link style={{color:'#e67e22',textDecoration:'none',alignItems:'center'}}>Forgot Your Password ?</Link>
             <br/><br/><br/>
           </Box>

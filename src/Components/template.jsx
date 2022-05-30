@@ -12,8 +12,8 @@ const inputstyle = {
     borderRadius: "8px"
 }
 function InputBox(props) {
+    let type=props.type
     let val=props.value
-    console.log(val,"values")
     if(val == undefined || val== null){
             val=" "
     }
@@ -27,18 +27,36 @@ function InputBox(props) {
                         <label style={{ fontSize: '18px', color: '#E1A100',display:'block' }}>{props.label}</label>
 
 
-
+            {props.type=='Password'?
+            <input
+            type="Password"
+            required
+            fullWidth
+            id=""
+            label="Email Address"
+            name=""
+            autoComplete=""
+            style={inputstyle}
+            onChange={props.onChange}
+            value={props.value}
+            
+        />
+            :
+            
             <input
 
                 required
                 fullWidth
-                id="email"
+                id=""
                 label="Email Address"
-                name="email"
-                autoComplete="email"
+                name=""
+                autoComplete=""
                 style={inputstyle}
+                onChange={props.onChange}
+                value={props.value}
                 
             />
+    }
             <br />
         </>
     )
@@ -63,7 +81,7 @@ function DropBox(props) {
         <>
             <label style={{ fontSize: '18px', color: '#E1A100',display:'block' }}>{props.label}</label>
           
-            <select name="drop" id="drop" style={inputstyle}>
+            <select name="drop" id="drop" style={inputstyle} onChange={props.onChange}>
             {options.map((v,i)=>(
                     <option value={v}>{v}</option>
                 ))}
@@ -79,16 +97,18 @@ function Calendar(props){
         <>
         <label style={{ fontSize: '18px', color: '#E1A100' }}>{props.label}</label>
             <br />
-        <input type='date' style={inputstyle} />
+        <input type='date' style={inputstyle} onChange={props.onChange} />
         <br /><br />
         </>
     )
 }
 
 function Button(props){
+
     const ContainerLoginButton = {
         backgroundColor: "#E1A100",
-        width: '350px',
+        width: props.width!==undefined ?props.width:'350px',
+        marginTop:props.marginTop !==undefined ?props.marginTop:'0px',
         height: '40px',
         borderRadius: "8px",
         color:'white',
@@ -97,7 +117,7 @@ function Button(props){
     };
     return(
         <>
-        <button style={ContainerLoginButton} onClick={props.onClick}>{props.name}</button>
+        <button style={ContainerLoginButton} onClick={props.onClick} >{props.name}</button>
         </>
     )
 }

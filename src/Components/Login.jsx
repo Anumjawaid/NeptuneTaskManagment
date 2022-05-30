@@ -43,12 +43,12 @@ export default function Login() {
     return (
         <React.Fragment >
             <div style={background}>
-            <div style={circle1('3%','20%')}>
+            <div style={circle1('2%','15%')}>
         </div>
-        <div style={circle1('70%','70%')}>
+        <div style={circle1('65%','70%')}>
         </div>
         
-                <div style={{paddingTop:'10rem',}}></div>
+                <div style={{paddingTop:'2.5rem',}}></div>
                 <div style={transparent}>
                 <SignIn/>
                 </div>

@@ -20,7 +20,6 @@ import { Grid } from '@mui/material';
 const listval=[
     {text:"User",icon:<GroupIcon />,path:"/userdashboard"},
     {text:"Task",icon:<GroupIcon />,path:"/taskboard"},
-    {text:"Signout",icon:<ExitToAppIcon />,path:"/"},
 ]
 const drawerWidth = 240;
 
@@ -155,12 +154,14 @@ export default function MiniDrawer(props) {
                 width:'80%',
                 marginLeft:'0.5rem'
               }}
+              href={text.path}
             >
               <ListItemIcon
                 sx={{
                   minWidth: 0,
                   mr: open ? 3 : 'auto',
                   justifyContent: 'center',
+                  
                   color:'white'
                 }}
               >
@@ -176,7 +177,7 @@ export default function MiniDrawer(props) {
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
                 backgroundColor:'#23282D',
-                marginTop:'13rem',
+                marginTop:'18rem',
                 borderRadius:'10px',
                 width:'80%',
                 marginLeft:'0.5rem'
@@ -190,9 +191,23 @@ export default function MiniDrawer(props) {
                   color:'white'
                 }}
               >
-                <img src={logo} style={{width:'50px',height:'50px'}}/>
+                <img src={logo} style={{width:'30px',height:'30px'}}/>
               </ListItemIcon>
               <ListItemText primary={"Admin"} sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  lr: open ? 6 : 'none',
+                  marginTop:'5px',
+                  justifyContent: 'center',
+                  color:'white',
+                  display: open ?'block':'none',
+
+                }}
+              >
+                <ExitToAppIcon />
+              </ListItemIcon>
+              
             </ListItemButton>
         </List>
       
