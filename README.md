@@ -1,8 +1,8 @@
-#Neptune Task Managment Software
+# Neptune Task Managment Software
 
-#dashboard Software
+# dashboard Software
 
-#Use Of Reducer and Context Hook
+# Use Of Reducer and Context Hook
 
 ### This Project is designed and developed Using React ,Material Ui And Firebase.
 
